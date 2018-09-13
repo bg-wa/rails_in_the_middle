@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a standard rails app that will catch all requests fromthe user, request them server side and render them back to the user.  This process allows you to modify any response onthe way back to the user, using nokogiri.
 
-Things you may want to cover:
+ ## Setup
+ Set env var
+ ```hijack_site_root_url```
+ .  This should end with a '/'.
 
-* Ruby version
+example: in `config/application.yml`
 
-* System dependencies
+ ```hijack_site_root_url: 'https://www.amazon.com/'```
 
-* Configuration
+ ```
+ bundle install
+ rails s
+ ```
 
-* Database creation
+ You can now browse amazon.com at `http://localhost:3000`.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ You can change the page any way you like, for any request method, at `app/controllers/catch_all_controller.rb`.

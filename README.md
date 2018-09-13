@@ -4,12 +4,12 @@ This is a standard rails app that will catch all requests fromthe user, request 
 
  ## Setup
  Set env var
- ```hijack_site_root_url```
+ ```intercept_site_root_url```
  .  This should end with a '/'.
 
 example: in `config/application.yml`
 
- ```hijack_site_root_url: 'https://www.amazon.com/'```
+ ```intercept_site_root_url: 'https://www.amazon.com/'```
 
  ```
  bundle install
